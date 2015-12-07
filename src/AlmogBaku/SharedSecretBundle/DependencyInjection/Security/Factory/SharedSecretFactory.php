@@ -14,7 +14,7 @@ use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
 
-class SharedSecretFactory extends  HttpBasicFactory
+class SharedSecretFactory extends HttpBasicFactory
 {
     /**
      * {@inheritdoc}
