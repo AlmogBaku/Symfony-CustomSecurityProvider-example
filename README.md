@@ -12,6 +12,8 @@ Symfony2 REST API with Custom Security Provider
 Our provider simply allowing you to authenticate using BASIC HTTP AUTH with your exists client_id and secret of the
 OAuth2 Client as user and password!
 
-Building the example of  "custom security provider" sponsored by [SubscribePro](http://www.subscribepro.com/)
+Building the example of "custom security provider" sponsored by [SubscribePro](http://www.subscribepro.com/)
 
 
+3. Presentation of a diagram that describe the "custom security provider":
+https://docs.google.com/presentation/d/15TEPpf7NnLMbA0JE2HbyoOrJVJHDY9jmykGl6hYMR34/edit?usp=sharing
