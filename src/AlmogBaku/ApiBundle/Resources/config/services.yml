@@ -1,0 +1,13 @@
+parameters:
+#    almogbaku.api.example.class: AlmogBaku\ApiBundle\Example
+
+services:
+    almogbaku.api.oauth_server.controller.token:
+        class: AlmogBaku\ApiBundle\Controller\OAuthTokenController
+        arguments: [ '@fos_oauth_server.server' ]
+
+    almogbaku.api.oauth_server.eventlistener.oautheventlistener:
+        class: AlmogBaku\ApiBundle\EventListener\OAuthEventListener
+        arguments: [ '@fos_oauth_server.access_token_manager.default' ]
+        tags:
+            - { name: kernel.event_listener, event: fos_oauth_server.pre_authorization_process, method: onPreAuthorizationProcess }

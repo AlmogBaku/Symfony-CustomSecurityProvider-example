@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>The application "{{ client.name }}" would like to connect to your account</h3>
+
+    {% if form.scope.vars.value %}
+        {% set scopes = form.scope.vars.value|split(",") %}
+        The following permissions will granted to the app:
+        <ul>
+            {% for scope in scopes %}
+            <li>{{ scope }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="{{ path('fos_oauth_server_authorize') }}" method="POST" class="fos_oauth_server_authorize" {{ form_enctype(form) }}>
+        <input class="btn" type="submit" name="rejected" value="{{ 'authorize.reject'|trans({}, 'FOSOAuthServerBundle') }}" />
+        <input class="btn btn-primary" type="submit" name="accepted" value="{{ 'authorize.accept'|trans({}, 'FOSOAuthServerBundle') }}" />
+
+        {{ form_row(form.client_id) }}
+        {{ form_row(form.response_type) }}
+        {{ form_row(form.redirect_uri) }}
+        {{ form_row(form.state) }}
+        {{ form_row(form.scope) }}
+        {{ form_rest(form) }}
+    </form>
+{% endblock body %}

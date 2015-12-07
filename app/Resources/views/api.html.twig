@@ -1,0 +1,18 @@
+{% if data is not defined %}
+    {% set data = {} %}
+{% endif %}
+{% if error is defined %}
+    {% set data = data|merge({'error': error}) %}
+{% endif %}
+{% if success is defined %}
+    {% set data = data|merge({'success': success}) %}
+{% endif %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="content" class="container">
+    <h2>Result:</h2>
+    {{ dump(data, true) }}
+    </section>
+{% endblock %}

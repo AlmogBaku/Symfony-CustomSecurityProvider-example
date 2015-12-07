@@ -1,0 +1,16 @@
+AlmogBaku\LibraryBundle\Entity\Author:
+    DA:
+        name: Douglas Adams
+        fullName: Douglas Adams
+        birthday: 1952-11-3, 00:00
+        genere: SciFi
+    JRR:
+        name: J.R.R. Tolkien
+        fullName: John Ronald Reuel Tolkien
+        birthday: 1892-3-1, 00:00
+        genere: Fantasy
+    GRRM:
+        name: George R.R. Martin
+        fullName: George Raymond Richard Martin
+        birthday: 1947-9-20, 00:00
+        genere: Fantasy

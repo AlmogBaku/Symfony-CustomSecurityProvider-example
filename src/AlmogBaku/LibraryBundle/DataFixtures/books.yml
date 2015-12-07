@@ -1,0 +1,49 @@
+AlmogBaku\LibraryBundle\Entity\Book:
+    Hitchhiker:
+        name: The Hitchhiker's Guide to the Galaxy
+        author: @DA
+        genere: SciFi
+    DoctorWho:
+        name: Doctor Who
+        author: @DA
+        genere: SciFi
+    DirkGently:
+        name: Dirk Gently
+        author: @DA
+        genere: SciFi
+    hobbit:
+        name: The Hobbit
+        author: @JRR
+        genere: Fantasy
+    lotr:
+        name: Lord of the rings
+        author: @JRR
+        genere: Fantasy
+    Silmarillion:
+        name: The Silmarillion
+        author: @JRR
+        genere: Fantasy
+    HME:
+        name: The History of Middle-earth
+        author: @JRR
+        genere: Fantasy
+    tales:
+        name: Unfinished Tales
+        author: @JRR
+        genere: Fantasy
+    GOT:
+        name: A Game of Thrones
+        author: @GRRM
+        genere: Fantasy
+    COK:
+        name: A Clash of Kings
+        author: @GRRM
+        genere: Fantasy
+    HK:
+        name: The Hedge Knight
+        author: @GRRM
+        genere: Fantasy
+    world:
+        name: The World of Ice & Fire
+        author: @GRRM
+        genere: Fantasy

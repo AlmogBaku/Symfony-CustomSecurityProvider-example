@@ -1,0 +1,19 @@
+parameters:
+#    almogbaku.sharedsecret.example.class: AlmogBaku\SharedSecretBundle\Example
+
+services:
+#    almogbaku.sharedsecret.example:
+#        class: %almogbaku.sharedsecret.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+#        calls:
+#            - [setService, [@service_id]]
+#        tags:
+#            - { name: twig.extension }
+#            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+    almogbaku.shared_secret.authentication.provider:
+        class: AlmogBaku\SharedSecretBundle\Security\Authentication\Provider\SharedSecretProvider
+        arguments: [ @fos_oauth_server.storage ]
+
+    almogbaku.shared_secret.authentication.listener:
+        class: AlmogBaku\SharedSecretBundle\Security\Firewall\SharedSecretListener
+        arguments: [ @security.context, @security.authentication.manager ]
